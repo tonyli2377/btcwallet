@@ -27,12 +27,14 @@ var (
 
 func main() {
 	// Use all processor cores.
+	println("main() begin")
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	// Work around defer not working after os.Exit.
 	if err := walletMain(); err != nil {
 		os.Exit(1)
 	}
+	println("main() begin")
 }
 
 // walletMain is a work-around main function that is required since deferred
