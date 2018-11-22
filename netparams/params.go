@@ -17,23 +17,29 @@ type Params struct {
 // MainNetParams contains parameters specific running btcwallet and
 // btcd on the main network (wire.MainNet).
 var MainNetParams = Params{
-	Params:        &chaincfg.MainNetParams,
-	RPCClientPort: "8334",
-	RPCServerPort: "8332",
+	Params: &chaincfg.MainNetParams,
+	//RPCClientPort: "8334",
+	RPCClientPort: "7334",
+	//RPCServerPort: "8332",
+	RPCServerPort: "7332",
 }
 
 // TestNet3Params contains parameters specific running btcwallet and
 // btcd on the test network (version 3) (wire.TestNet3).
 var TestNet3Params = Params{
-	Params:        &chaincfg.TestNet3Params,
-	RPCClientPort: "18334",
-	RPCServerPort: "18332",
+	Params: &chaincfg.TestNet3Params,
+	//RPCClientPort: "18334",
+	RPCClientPort: "17334",
+	//RPCServerPort: "18332",
+	RPCServerPort: "17332",
 }
 
 // SimNetParams contains parameters specific to the simulation test network
 // (wire.SimNet).
 var SimNetParams = Params{
-	Params:        &chaincfg.SimNetParams,
-	RPCClientPort: "18556",
-	RPCServerPort: "18554",
+	Params: &chaincfg.SimNetParams,
+	//RPCClientPort: "18556",
+	RPCClientPort: "17556",
+	//RPCServerPort: "18554",
+	RPCServerPort: "17554",
 }

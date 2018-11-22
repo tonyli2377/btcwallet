@@ -34,7 +34,7 @@ func main() {
 	if err := walletMain(); err != nil {
 		os.Exit(1)
 	}
-	println("main() begin")
+	println("main() end")
 }
 
 // walletMain is a work-around main function that is required since deferred

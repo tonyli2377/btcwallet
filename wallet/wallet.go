@@ -349,6 +349,7 @@ func (w *Wallet) syncWithChain() error {
 	isInitialSync := len(unspent) == 0
 
 	isRecovery := w.recoveryWindow > 0
+
 	birthday := w.Manager.Birthday()
 
 	// If an initial sync is attempted, we will try and find the block stamp
@@ -380,10 +381,12 @@ func (w *Wallet) syncWithChain() error {
 		}
 
 		checkHeight := bestHeight
+		/*LL,
 		if len(w.chainParams.Checkpoints) > 0 {
 			checkHeight = w.chainParams.Checkpoints[len(
 				w.chainParams.Checkpoints)-1].Height
 		}
+		*/
 
 		logHeight := checkHeight
 		if bestHeight > logHeight {
